@@ -1,0 +1,10 @@
+@import '../../styles/settings.scss';
+
+.favorite {
+  padding: $base-size;
+}
+
+.title {
+  padding: ($base-size * 3) 0;
+  text-align: center;
+}

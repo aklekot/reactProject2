@@ -1,0 +1,24 @@
+@import '../../styles/settings.scss';
+
+.searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        
+
+        .icon {
+            color: white;
+            font-size: 1.2rem;
+        }
+    }
+}
