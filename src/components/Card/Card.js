@@ -1,9 +1,10 @@
 import styles from './Card.module.scss';
 import { useDispatch } from 'react-redux';
-import { toggleCardFavoriteAction } from '../../redux/store';
+import { toggleCardFavoriteAction, removeCardAction } from '../../redux/store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as faSolidStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faRegularStar } from '@fortawesome/free-regular-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import clsx from 'clsx';
 
 
@@ -13,6 +14,10 @@ const Card = ({ id, title, isFavorite }) => {
 
     const toggleFavorite = () => {
         dispatch(toggleCardFavoriteAction(id));
+    };
+
+    const removeCard = () => {
+        dispatch(removeCardAction(id));
     };
 
     return (
@@ -26,6 +31,9 @@ const Card = ({ id, title, isFavorite }) => {
             >
                 <FontAwesomeIcon icon={isFavorite ? faSolidStar : faRegularStar} />
             </button>
+            <button onClick={removeCard} className={styles.removeButton}>
+          <FontAwesomeIcon icon={faTrash} />
+        </button>
         </li>
     );
 };

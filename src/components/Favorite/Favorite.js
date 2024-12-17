@@ -4,6 +4,7 @@ import styles from './Favorite.module.scss';
 import { useSelector } from 'react-redux';
 import { getFavoriteCards } from '../../redux/store'; 
 
+
 function Favorite() {
   const favoriteCards = useSelector(getFavoriteCards);
 

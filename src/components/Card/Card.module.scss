@@ -23,4 +23,10 @@
 .starIconActive {
     color: $color-warning;
 }
+
+.removeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }
