@@ -8,6 +8,19 @@
     margin: 0 0 $base-size 0;
     border-radius: $radius;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     font-weight: bold;
+    color: black;
+
+
+    .starButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: auto; 
+      }
+
+.starIconActive {
+    color: $color-warning;
+}
 }
